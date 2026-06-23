@@ -142,6 +142,60 @@
         <p>$98.000</p>
       </div>
     </div>
+
+    <section style="max-width: 600px; margin: 0 auto 40px; padding: 0 20px;">
+  <h2 style="text-align: center; color: #b87a72; margin-bottom: 20px;">Hacé tu pedido</h2>
+  <form id="formPedido" style="display: flex; flex-direction: column; gap: 12px;">
+    
+    <input type="text" id="nombre" placeholder="Tu nombre completo" required 
+           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    
+    <input type="text" id="producto" placeholder="¿Qué producto querés?" required 
+           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    
+    <input type="text" id="provincia" placeholder="Provincia" required 
+           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    
+    <input type="text" id="localidad" placeholder="Localidad / Ciudad" required 
+           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    
+    <input type="text" id="direccion" placeholder="Dirección (o 'retiro en sucursal')" required 
+           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    
+    <input type="text" id="codigoPostal" placeholder="Código Postal" required 
+           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+
+    <button type="submit" 
+            style="background-color: #d9a5a0; color: white; padding: 14px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
+      Enviar pedido por WhatsApp
+    </button>
+  </form>
+</section>
+
+<script>
+  document.getElementById('formPedido').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const producto = document.getElementById('producto').value;
+    const provincia = document.getElementById('provincia').value;
+    const localidad = document.getElementById('localidad').value;
+    const direccion = document.getElementById('direccion').value;
+    const codigoPostal = document.getElementById('codigoPostal').value;
+    
+    const numeroWhatsapp = "5493870000000"; // CAMBIAR por el número real
+    
+    const mensaje = `¡Hola! Quiero hacer un pedido:%0A%0A` +
+      `*Nombre:* ${nombre}%0A` +
+      `*Producto:* ${producto}%0A` +
+      `*Provincia:* ${provincia}%0A` +
+      `*Localidad:* ${localidad}%0A` +
+      `*Dirección:* ${direccion}%0A` +
+      `*Código Postal:* ${codigoPostal}`;
+    
+    window.open(`https://wa.me/${9543875657753}?text=${mensaje}`, '_blank');
+  });
+</script>
   </main>
 
   <footer>
