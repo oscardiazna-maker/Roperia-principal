@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA ROPERÍA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #faf6f3;
+      color: #3a2e2c;
+    }
+
+    header {
+      background-color: #d9a5a0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      color: #fff;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #fff;
+      font-style: italic;
+    }
+
+    .catalogo {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .producto {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .producto-info {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .producto-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .producto-info p {
+      color: #b87a72;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #3a2e2c;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>LA ROPERÍA</h1>
+    <p>Moda femenina con estilo</p>
+  </header>
+
+  <main class="catalogo">
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x400" alt="Vestido floral">
+      <div class="producto-info">
+        <h3>Vestido floral</h3>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x400" alt="Blusa blanca">
+      <div class="producto-info">
+        <h3>Blusa blanca</h3>
+        <p>$8.500</p>
+      </div>
+    </div>
+
+    <div class="producto">
+      <img src="https://via.placeholder.com/300x400" alt="Pantalón palazzo">
+      <div class="producto-info">
+        <h3>Pantalón palazzo</h3>
+        <p>$12.000</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 LA ROPERÍA — Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
