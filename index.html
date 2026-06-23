@@ -17,65 +17,46 @@
       color: #3a2e2c;
     }
 
-    header {
-      background-color: #d9a5a0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
     header h1 {
       font-size: 2.5rem;
       letter-spacing: 3px;
       color: #fff;
     }
 
-    header p {
-      margin-top: 8px;
-      color: #fff;
-      font-style: italic;
-    }
-
-    .catalogo {
-      max-width: 1000px;
-      margin: 40px auto;
+    .pedido-section {
+      max-width: 600px;
+      margin: 20px auto 40px;
       padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
     }
 
-    .producto {
-      background-color: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .producto:hover {
-      transform: translateY(-5px);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .producto-info {
-      padding: 16px;
+    .pedido-section h2 {
       text-align: center;
-    }
-
-    .producto-info h3 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-
-    .producto-info p {
       color: #b87a72;
-      font-weight: bold;
-      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .pedido-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pedido-section input {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    .pedido-section button {
+      background-color: #d9a5a0;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: inherit;
     }
 
     footer {
@@ -90,117 +71,92 @@
 <body>
 
   <header style="background-color: #d9a5a0; padding: 0px 20px 15px; text-align: center; overflow: hidden;">
-  <img src="PORTADA.png" alt="LA ROPERÍA" style="width: 90%; max-width: 900px; height: 190px; object-fit: cover; object-position: center 37%; display: block; margin: 0 auto;">
-  <p style="margin-top: 0px; color: #fff; font-style: italic; font-size: 1.1rem;">Moda femenina con estilo</p>
-</header>
-  <main class="catalogo">
+    <img src="PORTADA.png" alt="LA ROPERÍA" style="width: 90%; max-width: 900px; height: 190px; object-fit: cover; object-position: center 37%; display: block; margin: 0 auto;">
+    <p style="margin-top: 0px; color: #fff; font-style: italic; font-size: 1.1rem;">Moda femenina con estilo</p>
+  </header>
 
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400" alt="Vestido floral">
-      <div class="producto-info">
-        <h3>Vestido floral</h3>
-        <p>$15.000</p>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400" alt="Blusa blanca">
-      <div class="producto-info">
-        <h3>Blusa blanca</h3>
-        <p>$8.500</p>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400" alt="Pantalón palazzo">
-      <div class="producto-info">
-        <h3>Pantalón palazzo</h3>
-        <p>$12.000</p>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400" alt="Vestido floral">
-      <div class="producto-info">
-        <h3>Siempre Fashion</h3>
-        <p>$23.000</p>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400" alt="Vestido floral">
-      <div class="producto-info">
-        <h3>KE PASA Q NO VENDO</h3>
-        <p>$100.000</p>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400" alt="Vestido floral">
-      <div class="producto-info">
-        <h3>claua dia</h3>
-        <p>$98.000</p>
-      </div>
-    </div>
-
-    <section style="max-width: 600px; margin: 0 auto 40px; padding: 0 20px;">
-  <h2 style="text-align: center; color: #b87a72; margin-bottom: 20px;">Hacé tu pedido</h2>
-  <form id="formPedido" style="display: flex; flex-direction: column; gap: 12px;">
-    
-    <input type="text" id="nombre" placeholder="Tu nombre completo" required 
-           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
-    
-    <input type="text" id="producto" placeholder="¿Qué producto querés?" required 
-           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
-    
-    <input type="text" id="provincia" placeholder="Provincia" required 
-           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
-    
-    <input type="text" id="localidad" placeholder="Localidad / Ciudad" required 
-           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
-    
-    <input type="text" id="direccion" placeholder="Dirección (o 'retiro en sucursal')" required 
-           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
-    
-    <input type="text" id="codigoPostal" placeholder="Código Postal" required 
-           style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
-
-    <button type="submit" 
-            style="background-color: #d9a5a0; color: white; padding: 14px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">
-      Enviar pedido por WhatsApp
-    </button>
-  </form>
-</section>
-
-<script>
-  document.getElementById('formPedido').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nombre = document.getElementById('nombre').value;
-    const producto = document.getElementById('producto').value;
-    const provincia = document.getElementById('provincia').value;
-    const localidad = document.getElementById('localidad').value;
-    const direccion = document.getElementById('direccion').value;
-    const codigoPostal = document.getElementById('codigoPostal').value;
-    
-    const numeroWhatsapp = "5493870000000"; // CAMBIAR por el número real
-    
-    const mensaje = `¡Hola! Quiero hacer un pedido:%0A%0A` +
-      `*Nombre:* ${nombre}%0A` +
-      `*Producto:* ${producto}%0A` +
-      `*Provincia:* ${provincia}%0A` +
-      `*Localidad:* ${localidad}%0A` +
-      `*Dirección:* ${direccion}%0A` +
-      `*Código Postal:* ${codigoPostal}`;
-    
-    window.open(`https://wa.me/${9543875657753}?text=${mensaje}`, '_blank');
-  });
-</script>
+  <main class="catalogo" id="catalogo">
+    <!-- Los productos se van a dibujar acá automáticamente -->
   </main>
+
+  <section class="pedido-section">
+    <h2>Hacé tu pedido</h2>
+    <form id="formPedido">
+      <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+      <input type="text" id="producto" placeholder="¿Qué producto querés?" required>
+      <input type="text" id="provincia" placeholder="Provincia" required>
+      <input type="text" id="localidad" placeholder="Localidad / Ciudad" required>
+      <input type="text" id="direccion" placeholder="Dirección (o 'retiro en sucursal')" required>
+      <input type="text" id="codigoPostal" placeholder="Código Postal" required>
+      <button type="submit">Enviar pedido por WhatsApp</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2026 LA ROPERÍA — Todos los derechos reservados</p>
   </footer>
+
+  <script>
+    // ====== LISTA DE PRODUCTOS ======
+    // Para agregar un producto nuevo, copiá una línea { ... } y cambiá los datos.
+    const productos = [
+      { nombre: "Vestido floral", precio: 15000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "Blusa blanca", precio: 8500, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "Pantalón palazzo", precio: 12000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "Siempre Fashion", precio: 23000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "KE PASA Q NO VENDO", precio: 100000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "claua dia", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "claua dia", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+      { nombre: "pRODUCTO APRA", precio: 98000, imagen: "https://via.placeholder.com/300x400" },
+    ];
+
+    // ====== DIBUJAR LOS PRODUCTOS EN LA PÁGINA ======
+    const catalogo = document.getElementById('catalogo');
+
+    productos.forEach(p => {
+      const precioFormateado = p.precio.toLocaleString('es-AR');
+      catalogo.innerHTML += `
+        <div class="producto">
+          <img src="${p.imagen}" alt="${p.nombre}">
+          <div class="producto-info">
+            <h3>${p.nombre}</h3>
+            <p>$${precioFormateado}</p>
+          </div>
+        </div>
+      `;
+    });
+
+    // ====== FORMULARIO DE PEDIDO POR WHATSAPP ======
+    document.getElementById('formPedido').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const producto = document.getElementById('producto').value;
+      const provincia = document.getElementById('provincia').value;
+      const localidad = document.getElementById('localidad').value;
+      const direccion = document.getElementById('direccion').value;
+      const codigoPostal = document.getElementById('codigoPostal').value;
+
+      const numeroWhatsapp = "5493875657753";
+
+      const mensaje = `¡Hola! Quiero hacer un pedido:%0A%0A` +
+        `*Nombre:* ${nombre}%0A` +
+        `*Producto:* ${producto}%0A` +
+        `*Provincia:* ${provincia}%0A` +
+        `*Localidad:* ${localidad}%0A` +
+        `*Dirección:* ${direccion}%0A` +
+        `*Código Postal:* ${codigoPostal}`;
+
+      window.open(`https://wa.me/${numeroWhatsapp}?text=${mensaje}`, '_blank');
+    });
+  </script>
 
 </body>
 </html>
